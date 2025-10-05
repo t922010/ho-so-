@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini-AI Toán Học</title>
+  <link rel="stylesheet" href="../../setup_noidung_giaodien.css">
+  <link rel="stylesheet" href="mini-ai.css">
+  <script src="../../tuong_tac.js"></script>
+</head>
+<body>
+  <!-- Thanh điều hướng -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="../hom.e/home.html">Home</a></li>
+      <li><a href="../ho-so-giao-vien/ho-so-giao-vien.html">Hồ sơ Giáo viên</a></li>
+      <li><a href="../ho-so-hoc-sinh/ho-so-hoc-sinh.html">Hồ sơ Học sinh</a></li>
+      <li><a href="mini-ai.html">Mini-AI Toán Học</a></li>
+    </ul>
+  </nav>
+
+  <!-- Mini-AI Toán Học -->
+  <section id="mini-ai" class="content-section">
+    <h2>Mini-AI Toán Học & Hình Học</h2>
+    <div id="messages"></div>
+    <div class="composer">
+      <input id="input" type="text" placeholder="Ví dụ: sqrt(16), pt2:1,-3,2, plot: sin(x);cos(x), -180,180, area: chu nhat,5,10, perimeter: vuong,8" />
+      <button id="sendBtn">OK</button>
+    </div>
+    <div id="chartContainer">
+      <canvas id="chart"></canvas>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="mini-ai.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Hồ sơ Học sinh</title>
+  <link rel="stylesheet" href="../setup_noidung_giaodien.css"> <!-- Liên kết đến tệp CSS -->
+  <link rel="stylesheet" href="ho-so-hoc-sinh.css">
+</head>
+<body>
+  <!-- Thanh điều hướng -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="../hom.e/home.html">Home</a></li>
+      <li><a href="../ho-so-giao-vien/ho-so-giao-vien.html">Hồ sơ Giáo viên</a></li>
+      <li><a href="ho-so-hoc-sinh.html">Hồ sơ Học sinh</a></li>
+      <li><a href="../mini-ai/mini-ai.html">Mini-AI Toán Học</a></li>
+    </ul>
+  </nav>
+
+  <!-- Nội dung chính -->
+  <section id="student-profile" class="content-section">
+    <h1>Hồ sơ Học sinh</h1>
+    <div class="controls">
+      <input type="text" id="searchClass" placeholder="Tìm lớp...">
+      <button onclick="addClass()">➕ Thêm lớp</button>
+      <button onclick="deleteClass()">❌ Xóa lớp</button>
+      <button onclick="exportAbsent()">📤 Xuất học sinh nghỉ</button>
+    </div>
+
+    <div id="classesContainer" class="scrollable-table"></div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="ho-so-hoc-sinh.js"></script>
+  <script src="../../tuong_tac.js"></script>
+</body>
+</html>

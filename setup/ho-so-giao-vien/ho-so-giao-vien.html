@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản lý Hồ sơ Giáo viên</title>
+  <link rel="stylesheet" href="../setup_noidung_giaodien.css">
+  <link rel="stylesheet" href="ho-so-giao-vien.css">
+  <script src="../../tuong_tac.js"></script>
+</head>
+<body>
+  <!-- Thanh điều hướng -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="../hom.e/home.html">Home</a></li>
+      <li><a href="ho-so-giao-vien.html">Hồ sơ Giáo viên</a></li>
+      <li><a href="../ho-so-hoc-sinh/ho-so-hoc-sinh.html">Hồ sơ Học sinh</a></li>
+      <li><a href="../mini-ai/mini-ai.html">Mini-AI Toán Học</a></li>
+    </ul>
+  </nav>
+
+  <!-- Quản lý giáo viên -->
+  <h2 id="ho-so-giao-vien">Quản lý Hồ sơ Giáo viên</h2>
+  <input type="text" id="searchInput" placeholder="Tìm giáo viên hoặc môn học..." onkeyup="searchTeachers()">
+
+  <div class="upload-area">
+    <label><strong>📎 Tải hồ sơ :</strong></label><br><br>
+    <input type="text" id="teacherName" placeholder="Tên giáo viên">
+    <input type="text" id="subjectName" placeholder="Môn dạy"><br><br>
+    <input type="file" id="fileInput" multiple accept=".pdf,.doc,.docx">
+    <button onclick="addTeacher()">Thêm hồ sơ</button>
+  </div>
+
+  <table id="teacherTable">
+    <thead>
+      <tr>
+        <th>📘 Tên Giáo Viên</th>
+        <th>📚 Môn Dạy</th>
+        <th>📎 Tệp Hồ Sơ</th>
+        <th>❌ Xóa</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+  </table>
+
+  <script src="ho-so-giao-vien.js"></script>
+</body>
+</html>

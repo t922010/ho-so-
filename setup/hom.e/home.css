@@ -1,0 +1,168 @@
+/* ============================
+   Phần chung: font, padding, màu chữ
+============================ */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  color: #333;
+  background: #f9f9f9; /* Nền mặc định */
+  min-height: 100vh;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+input[type="text"], input[type="file"] {
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+input[type="text"] {
+  width: 300px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background-color: #eee;
+}
+
+.upload-area {
+  border: 2px dashed #aaa;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  background: #fff;
+}
+
+.controls {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.scrollable-table {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #fff;
+}
+
+/* ============================
+   Navbar
+============================ */
+.navbar {
+  background-color: #2563eb;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  display: block;
+}
+
+.navbar a:hover {
+  background-color: #1d4ed8;
+}
+
+/* Trạng thái đang chọn cho tab (trang hiện tại) */
+.navbar a.active {
+  background-color: #1d4ed8;
+}
+
+/* Dropdown menu */
+.dropdown {
+  display: none; /* Ẩn menu con mặc định */
+  position: absolute;
+  background-color: #2563eb;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  min-width: 220px;
+}
+
+.dropdown li {
+  width: 200px;
+}
+
+.dropdown a {
+  padding: 8px 12px;
+  white-space: nowrap;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #1d4ed8;
+}
+
+/* Hiển thị menu con khi mở */
+.navbar li.open > .dropdown { 
+  display: block; 
+}
+
+/* ============================
+   Trang Home / Welcome
+============================ */
+/* Chỉ áp dụng khi body có class "home-page" */
+body.home-page {
+  background: 
+    radial-gradient(1200px 600px at 20% -10%, rgba(37,99,235,0.20), transparent),
+    radial-gradient(1000px 500px at 120% 10%, rgba(99,102,241,0.18), transparent),
+    linear-gradient(180deg, #f8fafc 0%, #eef2ff 120%);
+}
+
+body.home-page .home-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 120px);
+}
+
+body.home-page .home-section h1 {
+  font-size: 64px;
+  color: #2563eb;
+  margin: 0 0 8px 0;
+}
+
+body.home-page .home-section p {
+  text-align: center;
+  color: #334155;
+  font-size: 18px;
+}
+
+

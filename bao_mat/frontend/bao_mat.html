@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self';">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Hệ thống bảo mật đăng nhập" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Security System - Login</title>
+  <link rel="stylesheet" href="bao_mat.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Đăng nhập</h1>
+    <form id="loginForm">
+      <label>
+        Email
+        <input type="email" id="email" required autocomplete="username" 
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+               title="Vui lòng nhập email hợp lệ">
+      </label>
+      <label>
+        Mật khẩu
+        <input type="password" id="password" required autocomplete="current-password" 
+               minlength="8" 
+               pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+               title="Mật khẩu phải có ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt">
+      </label>
+      <div class="form-options">
+        <label class="checkbox-label">
+          <input type="checkbox" id="rememberMe">
+          <span>Ghi nhớ đăng nhập</span>
+        </label>
+      </div>
+      <button type="submit" id="loginBtn">Đăng nhập</button>
+      <div id="msg" role="status" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <script src="bao_mat.js" nonce=""></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
